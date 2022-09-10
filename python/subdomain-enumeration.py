@@ -14,4 +14,4 @@ for sub in subdoms:
         pass
     
     else:
-        print("Valid domain: ",sub_domains)
+        print("Valid domain: ",sub_domains) 
