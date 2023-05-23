@@ -23,6 +23,7 @@ with sync_playwright() as p:
     if not os.path.exists(f"{domain}"):
         os.makedirs(f"{domain}/screenshots/")
         os.makedirs(f"{domain}/jsfiles/")
+    page.wait_for_timeout(5000)
     page.screenshot(path=f"{domain}/screenshots/{domain}-{current_date}.png")
     js_files = page.query_selector_all("script[src]")
     for js_file in js_files:
